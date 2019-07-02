@@ -1,0 +1,12 @@
+<div class="card" fxLayout="column" fxLayoutGap="8px">
+  <div matRipple>
+    <app-movie-poster [image]="'http://f.i.uol.com.br/folha/ilustrada/images/16020331.jpeg'"
+      [imageXs]="'http://asnamanga.com/wp-content/uploads/2016/01/A-5%C2%AA-Onda-cartaz-final.jpg'"></app-movie-poster>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxLayoutAlign.xs="space-between center">
+    <h2 class="title">
+      Title
+    </h2>
+    <app-vote-average [note]="7.8" [maxNote]="10"></app-vote-average>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+@import '../../../assets/styles/colors.scss';
+@import '~@angular/material/theming';
+
+
+.mat-toolbar {
+  background-color: $dark;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  @include mat-elevation(6);
+
+  img.logo {
+   height: 35px;
+   width: auto; 
+  }
+
+  .profile-user {
+    img {
+      width: auto;
+      height: 30px;
+    }
+  }
+}

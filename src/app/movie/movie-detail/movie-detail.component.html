@@ -1,0 +1,25 @@
+<div fxLayout.xs="column" fxLayoutGap.xs="8px" fxLayout="row" fxLayoutGap="32px">
+  <app-movie-poster fxFlex="300px" [image]="'http://f.i.uol.com.br/folha/ilustrada/images/16020331.jpeg'"
+    [imageXs]="'http://asnamanga.com/wp-content/uploads/2016/01/A-5%C2%AA-Onda-cartaz-final.jpg'"></app-movie-poster>
+  <div fxFlex fxLayout="column" fxLayoutGap="16px">
+    <h1>Title</h1>
+    <p>
+      A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form
+      of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric
+      gets in the way and ignites an out-of-control spiral toward oblivion.
+    </p>
+    <p>
+      Gênero: Ação
+    </p>
+    <p>
+      Idioma: Inglês
+    </p>
+    <p fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="6px">
+      <span>Nota:</span>
+      <app-vote-average [note]="7.8" [maxNote]="10"></app-vote-average>
+    </p>
+    <p>
+      Data de Lançamento: 13 de Agosto de 2016
+    </p>
+  </div>
+</div>

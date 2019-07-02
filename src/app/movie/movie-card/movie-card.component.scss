@@ -1,0 +1,20 @@
+.card {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h2.title {
+    font-weight: 600;
+    font-size: 24px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

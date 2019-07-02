@@ -1,0 +1,10 @@
+@import '../../../assets/styles/colors.scss';
+
+p {
+  font-size: 14px;
+  color: $gray;
+  .note {
+    font-weight: 600;
+    color: $yellow;
+  }
+}

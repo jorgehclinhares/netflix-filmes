@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/theme.scss';
+@import './assets/styles/colors.scss';
+
+html, body {
+  height: 100%;
+  font-family: "Google-Sans";
+  background-color: $dark;
+  color: $white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}

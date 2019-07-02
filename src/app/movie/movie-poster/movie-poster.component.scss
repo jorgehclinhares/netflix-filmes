@@ -1,0 +1,9 @@
+@import '../../../assets/styles/colors.scss';
+@import '~@angular/material/theming';
+
+img {
+  width: 100%;
+  height: auto;
+  background-color: $gray;
+  @include mat-elevation(6);
+}

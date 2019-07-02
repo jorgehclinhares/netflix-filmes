@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+    <img src="/assets/images/netflix-logo.png" class="logo" alt="Logo Netflix Films" />
+    <div class="profile-user">
+      <button mat-button [matMenuTriggerFor]="menu" color="primary">
+        <div fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="center center">
+          <img src="/assets/images/avatar.png" class="logo" alt="Logo Netflix Films" />
+          <span *ngIf="activeMediaQuery !== 'xs'">Jorge</span>
+        </div>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="notImplemented()">Configurações</button>
+        <button mat-menu-item (click)="notImplemented()">Sair</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
