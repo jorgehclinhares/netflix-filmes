@@ -1,0 +1,11 @@
+<div class="card" fxLayout="column" fxLayoutGap="8px">
+  <div matRipple>
+    <app-movie-poster [image]="movie.poster_path" [imageXs]="movie.backdrop_path"></app-movie-poster>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="row" fxLayoutAlign.xs="space-between center">
+    <h2 class="title">
+      {{ movie.title }}
+    </h2>
+    <app-vote-average [note]="movie.vote_average" [maxNote]="10"></app-vote-average>
+  </div>
+</div>

@@ -1,6 +1,8 @@
 <mat-toolbar>
   <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
-    <img src="/assets/images/netflix-logo.png" class="logo" alt="Logo Netflix Films" />
+    <div class="container-logo" matRipple fxLayoutAlign="center center">
+      <img [routerLink]="['/']" src="/assets/images/netflix-logo.png" class="logo" alt="Logo Netflix Films" />
+    </div>
     <div class="profile-user">
       <button mat-button [matMenuTriggerFor]="menu" color="primary">
         <div fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="center center">

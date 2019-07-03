@@ -1,0 +1,6 @@
+<ng-container *ngIf="activeMediaQuery !== 'xs'; else backdropTemplate">
+  <img [src]="image" class="poster" />
+</ng-container>
+<ng-template #backdropTemplate>
+  <img [src]="imageXs" class="backdrop" />
+</ng-template>

@@ -1,7 +1,6 @@
 @import '../../../assets/styles/colors.scss';
 @import '~@angular/material/theming';
 
-
 .mat-toolbar {
   background-color: $dark;
   position: fixed;
@@ -9,9 +8,14 @@
   z-index: 1;
   @include mat-elevation(6);
 
-  img.logo {
-   height: 35px;
-   width: auto; 
+  .container-logo {
+    padding: 8px;
+    
+    img.logo {
+      height: 35px;
+      width: auto; 
+      cursor: pointer;
+     }
   }
 
   .profile-user {

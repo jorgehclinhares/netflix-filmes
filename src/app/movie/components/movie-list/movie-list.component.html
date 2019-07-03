@@ -1,0 +1,8 @@
+<div fxLayout="row wrap">
+  <app-movie-card *ngFor="let movie of movies" [movie]="movie" fxFlex="20" fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25"
+    [routerLink]="['/movies/' + movie.id]">
+  </app-movie-card>
+</div>
+<div *ngIf="processing === true" fxLayout="row" fxLayoutAlign="center center">
+  <mat-spinner color="accent" diameter="40"></mat-spinner>
+</div>

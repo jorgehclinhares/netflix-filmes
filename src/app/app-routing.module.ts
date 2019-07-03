@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MovieListComponent } from './movie/movie-list/movie-list.component';
-import { MovieDetailComponent } from './movie/movie-detail/movie-detail.component';
 
 const routes: Routes = [
   {
@@ -9,16 +7,22 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: MovieListComponent
+        redirectTo: 'movies',
+        pathMatch: 'full'
       },
       {
-        path: ':movieId',
+        path: 'movies',
         children: [
           {
             path: '',
-            component: MovieDetailComponent
+            loadChildren: () => import('./movie/movie.module').then(mod => mod.MovieModule)
           }
         ]
+      },
+      {
+        path: '**',
+        redirectTo: 'movies',
+        pathMatch: 'full'
       }
     ]
   }

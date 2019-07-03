@@ -1,0 +1,39 @@
+<ng-container *ngIf="movie; then movieTemplate; else spinnerTemplate"></ng-container>
+<ng-template #movieTemplate>
+  <div class="container" fxLayout.xs="column" fxLayoutGap.xs="16px" fxLayout="row" fxLayoutGap="32px">
+    <app-movie-poster fxFlex.gt-xs="300px" [image]="movie.poster_path" [imageXs]="movie.backdrop_path">
+    </app-movie-poster>
+    <div fxFlex fxLayout="column" fxLayoutGap="16px">
+      <h1>{{ movie?.title }}</h1>
+      <div>
+        {{ movie?.overview }}
+      </div>
+      <div>
+        Adulto: {{ movie?.adult ? 'Sim' : 'Não' }}
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="6px">
+        <span>Nota:</span>
+        <app-vote-average [note]="movie.vote_average" [maxNote]="10"></app-vote-average>
+      </div>
+      <div>
+        Lançamento: {{ movie?.release_date | date: 'd/MM/yyyy'}}
+      </div>
+      <div>
+        <span>Gênero(s):</span>
+        <ul>
+          <li *ngFor="let genre of movie.genres">
+            {{ genre?.name}}
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="movie?.homepage">
+        <button (click)="openHomepage()" mat-raised-button color="accent">SITE DO FILME</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<ng-template #spinnerTemplate>
+  <div class="full" fxLayoutAlign="center center">
+    <mat-spinner color="accent" diameter="60"></mat-spinner>
+  </div>
+</ng-template>
